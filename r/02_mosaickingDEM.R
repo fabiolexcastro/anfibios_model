@@ -30,4 +30,5 @@ writeRaster(dem_co2, '../data/raster/dem/process/03arc_seconds/dem_up_1500.tif')
 # Raster to polygon --------------------------------------------------------
 dem_co3 <- dem_co2 * 0
 dem_mask <- rasterToPolygons(dem_co3, dissolve = TRUE)
-  
+
+shapefile(dem_mask, '../data/shapefiles/mask/mask_dem_03.shp')
